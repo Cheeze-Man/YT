@@ -5,25 +5,41 @@ import {
   FaCamera,
   FaRegBell,
 } from "react-icons/fa";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import profile from "../proflle.jpg";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function NavBar() {
+  const { keyword } = useParams();
+  const navigate = useNavigate();
+  const [text, setText] = useState("");
+
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/videos/${text}`);
+  };
+  useEffect(() => setText(keyword || ""), [keyword]);
+
   return (
     <div className="nav">
       <div className="logo-container">
         <FaBars className="icons menu" />
-        <a href="#">
+        <Link to="/" className="link">
           <FaYoutube className="icons logo" />
           YouTube
-        </a>
+        </Link>
       </div>
-      <div className="search-container">
-        <input type="text" placeholder="검색" />
+      <form className="search-container" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
         <button type="submit">
           <FaSearch className="sb" />
         </button>
-      </div>
+      </form>
       <div className="profile-container">
         <FaCamera className="icons li" />
         <FaRegBell className="icons li" />
