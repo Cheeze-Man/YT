@@ -11,20 +11,20 @@ import profile from "../proflle.jpg";
 export default function NavBar() {
   return (
     <div className="nav">
-      <div className="left">
+      <div className="logo-container">
         <FaBars className="icons menu" />
-        <FaYoutube className="icons logo" />
-        <a>YouTube</a>
+        <a href="#">
+          <FaYoutube className="icons logo" />
+          YouTube
+        </a>
       </div>
-      <div className="mid">
-        <form>
-          <input type="text" placeholder="검색" className="search-bar" />
-          <button className="search-btn">
-            <FaSearch className="sb" />
-          </button>
-        </form>
+      <div className="search-container">
+        <input type="text" placeholder="검색" />
+        <button type="submit">
+          <FaSearch className="sb" />
+        </button>
       </div>
-      <div className="right">
+      <div className="profile-container">
         <FaCamera className="icons li" />
         <FaRegBell className="icons li" />
         <img src={profile} alt="profile" className="profile" />

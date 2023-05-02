@@ -1,7 +1,6 @@
 * {
   text-align: center;
   background-color: #0f0f0f;
-  /* color: white; */
 }
 
 .nav {
@@ -10,48 +9,52 @@
   justify-content: space-between;
   padding: 0px 16px;
   color: white;
-  font-size: 0;
 }
-.left {
+.logo-container {
   display: flex;
   align-items: center;
   margin-right: auto;
+  color: white;
 }
-.right {
+.logo-container a {
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.profile-container {
   align-items: center;
   margin-left: auto;
 }
-.mid {
-  align-items: center;
-  flex-grow: 1;
-  margin: 10px 10px;
+
+.search-container {
+  display: flex;
+  margin-top: 5px;
 }
 
-.search-bar {
-  height: 40px;
+.search-container input {
   width: 527px;
-  border-radius: 50px 0 0 50px;
+  flex: 1;
+  padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.468);
-  font-size: 1rem;
-  margin: 0px 0px 0px 32px;
-  padding: 0px 4px 0px 16px;
+  border-radius: 20px 0 0 20px;
+  font-size: 17px;
 }
-.search-bar::placeholder {
+.search-container input::placeholder {
   text-align: left;
-  text-indent: 15px;
+  text-indent: 10px;
 }
-.search-btn {
-  height: 41px;
-  width: 70px;
-  color: white;
-  border-radius: 0 50px 50px 0;
+
+.search-container button {
+  padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.468);
-  font-size: 15px;
-  padding: 1px 16px;
-  background-color: grey;
-}
-.sb {
-  background-color: inherit;
+  background-color: #222222;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  width: 70px;
 }
 
 .icons {
@@ -62,7 +65,7 @@
   margin-right: 16px;
 }
 .logo {
-  margin-right: 2px;
+  margin-right: 3px;
   color: red;
   height: 32px;
   width: 32px;
