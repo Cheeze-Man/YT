@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
 import Youtube, { search } from "../api/youtube";
-import FakeYoutube from "../api/fakeYT";
+import FakeYoutube from "../api/fakeYoutubeClient";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 export default function Videos() {
