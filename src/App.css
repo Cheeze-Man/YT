@@ -9,6 +9,7 @@
   justify-content: space-between;
   padding: 0px 16px;
   color: white;
+  margin-bottom: 8px;
 }
 .logo-container {
   display: flex;
@@ -25,6 +26,7 @@
   align-items: center;
 }
 .profile-container {
+  display: flex;
   align-items: center;
   margin-left: auto;
 }
