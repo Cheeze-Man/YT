@@ -8,13 +8,13 @@ export default function VideoCard({ video, type }) {
   const isList = type === "list";
   return (
     <li
-      className={isList ? "flex gap-1 m-2" : ""}
+      className={isList ? "ytbox flex gap-1 m-2" : "ytbox"}
       onClick={() => {
         navigate(`/videos/watch/${video.id}`, { state: { video } });
       }}
     >
       <img
-        className={isList ? "w-60 mr-2" : "w-full"}
+        className={isList ? "tn-img w-60 mr-2" : "tn-img w-full"}
         src={thumbnails.medium.url}
         alt={title}
       />

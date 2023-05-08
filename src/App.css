@@ -2,6 +2,18 @@
   text-align: center;
   background-color: #0f0f0f;
 }
+::-webkit-scrollbar {
+  background-color: #0f0f0f;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.182);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #474747;
+}
 
 .nav {
   display: flex;
@@ -9,6 +21,7 @@
   justify-content: space-between;
   padding: 0px 16px;
   color: white;
+  margin: 10px auto 30px auto;
 }
 .logo-container {
   display: flex;
@@ -63,6 +76,7 @@
 .icons {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 .menu {
   margin-right: 16px;
@@ -77,6 +91,7 @@
   height: 32px;
   width: 32px;
   border-radius: 100%;
+  cursor: pointer;
 }
 .li {
   margin-right: 25px;
@@ -84,4 +99,16 @@
 
 .videos {
   color: white;
+}
+.ytbox {
+  cursor: pointer;
+}
+.ytbox:nth-child(5n + 1) {
+  margin-left: 20px;
+}
+.ytbox:nth-child(5n) {
+  margin-right: 20px;
+}
+.tn-img {
+  border-radius: 10px;
 }
